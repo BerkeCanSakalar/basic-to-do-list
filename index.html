@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profesyonel To-Do List</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Profesyonel To-Do List</h1>
+
+    <button id="darkModeToggle">🌙 Karanlık Mod</button>
+
+
+    <!-- Arama Kutusu -->
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Görevlerde ara...">
+    </div>
+    
+    <!-- Görev Ekleme -->
+    <div class="input-container">
+      <input type="text" id="taskInput" placeholder="Görev ekle...">
+      <select id="categorySelect">
+        <option value="Genel">Genel</option>
+        <option value="İş">İş</option>
+        <option value="Kişisel">Kişisel</option>
+      </select>
+
+      <select id="prioritySelect">
+        <option value="Yüksek">Yüksek Öncelik</option>
+        <option value="Orta">Orta Öncelik</option>
+        <option value="Düşük">Düşük Öncelik</option>
+      </select>
+
+      <input type="date" id="dateInput">
+      <button id="addTaskButton">Ekle</button>
+    </div>
+
+    <select id="filterCategory">
+      <option value="Hepsi">Hepsi</option>
+      <option value="Genel">Genel</option>
+      <option value="İş">İş</option>
+      <option value="Kişisel">Kişisel</option>
+    </select>
+    
+    
+    <!-- Sayaç -->
+    <div class="counter">
+      <span id="totalTasks">Toplam Görevler: 0</span> | 
+      <span id="completedTasks">Tamamlanan Görevler: 0</span>
+    </div>
+
+    <!-- Görev Listesi -->
+    <ul id="taskList"></ul>
+
+    <!-- Tamamlanan Görevler -->
+    <h2>Tamamlanan Görevler</h2>
+    <ul id="completedTaskList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
